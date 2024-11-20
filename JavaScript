@@ -1,0 +1,12 @@
+// scripts.js
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll('.navbar a');
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(e.target.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  console.log("Cancer Information Hub is ready.");
+});
